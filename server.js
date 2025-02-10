@@ -15,7 +15,10 @@ const app = express();
 // Middleware
 app.use(
   cors({
-    origin: ["http://localhost:5173"], // Allow only your frontend
+    origin: [
+      "http://localhost:5173",
+      "https://altius-assignment-frontend.vercel.app",
+    ], // Allow only your frontend
     methods: "GET,POST,PUT,DELETE,PATCH", // Allowed methods
     credentials: true, // If using cookies or authentication
   })
